@@ -109,7 +109,7 @@ describe('Selection time unit', () => {
     data2.forEach((tx, idx) => {
       if (tx.type === 'formula' && tx.as === 'seconds_date') {
         tuIdx = idx;
-      } else if (tx.type === 'filter' && tx.expr.indexOf('vlSingle') >= 0) {
+      } else if (tx.type === 'filter' && tx.expr.indexOf('vlSelectionTest') >= 0) {
         selIdx = idx;
       }
     });
