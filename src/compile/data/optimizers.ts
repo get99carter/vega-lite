@@ -10,16 +10,19 @@ import {TimeUnitNode} from './timeunit';
  *
  * If the callback returns true, the recursion continues.
  */
-export function iterateFromLeaves(f: (node: DataFlowNode) => boolean) {
-  function optimizeNextFromLeaves(node: DataFlowNode) {
+export function iterateFromLeaves(f: (node: DataFlowNode) => [boolean, boolean]) {
+  function optimizeNextFromLeaves(node: DataFlowNode): boolean {
     if (node instanceof SourceNode) {
-      return;
+      return false;
     }
 
     const next = node.parent;
-    if (f(node)) {
-      optimizeNextFromLeaves(next);
+    const [continueFlag, mutatedFlag] = f(node);
+    let childFlag = false;
+    if (continueFlag) {
+      childFlag = optimizeNextFromLeaves(next);
     }
+    return mutatedFlag || childFlag;
   }
 
   return optimizeNextFromLeaves;
@@ -28,33 +31,34 @@ export function iterateFromLeaves(f: (node: DataFlowNode) => boolean) {
 /**
  * Move parse nodes up to forks.
  */
-export function moveParseUp(node: DataFlowNode) {
+export function moveParseUp(node: DataFlowNode): [boolean, boolean] {
   const parent = node.parent;
-
+  let flag = false;
   // move parse up by merging or swapping
   if (node instanceof ParseNode) {
     if (parent instanceof SourceNode) {
-      return false;
+      return [false, flag];
     }
 
     if (parent.numChildren() > 1) {
       // don't move parse further up but continue with parent.
-      return true;
+      return [true, flag];
     }
 
     if (parent instanceof ParseNode) {
+      flag = true;
       parent.merge(node);
     } else {
       // don't swap with nodes that produce something that the parse node depends on (e.g. lookup)
       if (hasIntersection(parent.producedFields(), node.dependentFields())) {
-        return true;
+        return [true, flag];
       }
-
+      flag = true;
       node.swapWithParent();
     }
   }
 
-  return true;
+  return [true, flag];
 }
 
 /**
@@ -62,14 +66,16 @@ export function moveParseUp(node: DataFlowNode) {
  * The reason is that we don't need subtrees that don't have any output nodes.
  * Facet nodes are needed for the row or column domains.
  */
-export function removeUnusedSubtrees(node: DataFlowNode) {
+export function removeUnusedSubtrees(node: DataFlowNode): [boolean, boolean] {
+  let flag = false;
   if (node instanceof OutputNode || node.numChildren() > 0 || node instanceof FacetNode) {
     // no need to continue with parent because it is output node or will have children (there was a fork)
-    return false;
+    return [false, false];
   } else {
+    flag = true;
     node.remove();
   }
-  return true;
+  return [true, flag];
 }
 
 /**
@@ -80,17 +86,19 @@ export function removeUnusedSubtrees(node: DataFlowNode) {
 export function removeDuplicateTimeUnits(leaf: DataFlowNode) {
   let fields = {};
   return iterateFromLeaves((node: DataFlowNode) => {
+    let flag = false;
     if (node instanceof TimeUnitNode) {
       const pfields = node.producedFields();
       const dupe = keys(pfields).every(k => !!fields[k]);
 
       if (dupe) {
+        flag = true;
         node.remove();
       } else {
         fields = {...fields, ...pfields};
       }
     }
 
-    return true;
+    return [true, flag];
   })(leaf);
 }
