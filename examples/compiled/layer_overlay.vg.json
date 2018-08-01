@@ -5,21 +5,27 @@
   "height": 200,
   "style": "cell",
   "data": [
-    {"name": "source_0", "url": "data/cars.json", "format": {"type": "json"}},
+    {
+      "name": "source_0",
+      "url": "data/cars.json",
+      "format": {"type": "json", "parse": {"Horsepower": "number"}}
+    },
     {
       "name": "data_0",
       "source": "source_0",
       "transform": [
         {
-          "type": "formula",
-          "expr": "toNumber(datum[\"Horsepower\"])",
-          "as": "Horsepower"
+          "type": "aggregate",
+          "groupby": ["Cylinders"],
+          "ops": ["min"],
+          "fields": ["Horsepower"],
+          "as": ["min_Horsepower"]
         }
       ]
     },
     {
       "name": "data_1",
-      "source": "data_0",
+      "source": "source_0",
       "transform": [
         {
           "type": "aggregate",
@@ -32,31 +38,7 @@
     },
     {
       "name": "data_2",
-      "source": "data_0",
-      "transform": [
-        {
-          "type": "aggregate",
-          "groupby": ["Cylinders"],
-          "ops": ["min"],
-          "fields": ["Horsepower"],
-          "as": ["min_Horsepower"]
-        }
-      ]
-    },
-    {
-      "name": "data_3",
       "source": "source_0",
-      "transform": [
-        {
-          "type": "formula",
-          "expr": "toNumber(datum[\"Horsepower\"])",
-          "as": "Horsepower"
-        }
-      ]
-    },
-    {
-      "name": "data_4",
-      "source": "data_3",
       "transform": [
         {
           "type": "aggregate",
@@ -68,8 +50,8 @@
       ]
     },
     {
-      "name": "data_5",
-      "source": "data_3",
+      "name": "data_3",
+      "source": "source_0",
       "transform": [
         {
           "type": "aggregate",
@@ -94,7 +76,7 @@
       "type": "line",
       "style": ["line"],
       "sort": {"field": "datum[\"Cylinders\"]", "order": "descending"},
-      "from": {"data": "data_4"},
+      "from": {"data": "data_2"},
       "encode": {
         "update": {
           "stroke": {"value": "darkred"},
@@ -113,7 +95,7 @@
       "name": "layer_0_layer_1_marks",
       "type": "symbol",
       "style": ["point"],
-      "from": {"data": "data_5"},
+      "from": {"data": "data_3"},
       "encode": {
         "update": {
           "opacity": {"value": 1},
@@ -137,7 +119,7 @@
       "type": "line",
       "style": ["line"],
       "sort": {"field": "datum[\"Cylinders\"]", "order": "descending"},
-      "from": {"data": "data_1"},
+      "from": {"data": "data_0"},
       "encode": {
         "update": {
           "stroke": {"value": "#4c78a8"},
@@ -156,7 +138,7 @@
       "name": "layer_1_layer_1_marks",
       "type": "symbol",
       "style": ["point"],
-      "from": {"data": "data_2"},
+      "from": {"data": "data_1"},
       "encode": {
         "update": {
           "opacity": {"value": 1},
@@ -182,10 +164,10 @@
       "type": "point",
       "domain": {
         "fields": [
-          {"data": "data_4", "field": "Cylinders"},
-          {"data": "data_5", "field": "Cylinders"},
-          {"data": "data_1", "field": "Cylinders"},
-          {"data": "data_2", "field": "Cylinders"}
+          {"data": "data_2", "field": "Cylinders"},
+          {"data": "data_3", "field": "Cylinders"},
+          {"data": "data_0", "field": "Cylinders"},
+          {"data": "data_1", "field": "Cylinders"}
         ],
         "sort": true
       },
@@ -197,10 +179,10 @@
       "type": "linear",
       "domain": {
         "fields": [
-          {"data": "data_4", "field": "max_Horsepower"},
-          {"data": "data_5", "field": "max_Horsepower"},
-          {"data": "data_1", "field": "min_Horsepower"},
-          {"data": "data_2", "field": "min_Horsepower"}
+          {"data": "data_2", "field": "max_Horsepower"},
+          {"data": "data_3", "field": "max_Horsepower"},
+          {"data": "data_0", "field": "min_Horsepower"},
+          {"data": "data_1", "field": "min_Horsepower"}
         ]
       },
       "range": [{"signal": "height"}, 0],

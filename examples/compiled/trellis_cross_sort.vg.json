@@ -94,12 +94,30 @@
       "name": "data_2",
       "source": "data_0",
       "transform": [
-        {"type": "formula", "expr": "toNumber(datum[\"x\"])", "as": "x"},
-        {"type": "formula", "expr": "toNumber(datum[\"y\"])", "as": "y"}
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
       ]
     },
     {
       "name": "data_3",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_4",
       "source": "data_0",
       "transform": [
         {
@@ -112,7 +130,7 @@
       ]
     },
     {
-      "name": "data_4",
+      "name": "data_5",
       "source": "data_0",
       "transform": [
         {
@@ -122,6 +140,2562 @@
           "fields": ["median_y_by_b"],
           "as": ["median_median_y_by_b"]
         }
+      ]
+    },
+    {
+      "name": "data_6",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_7",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_8",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_9",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_10",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_11",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_12",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_13",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_14",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_15",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_16",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_17",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_18",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_19",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_20",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_21",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_22",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_23",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_24",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_25",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_26",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_27",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_28",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_29",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_30",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_31",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_32",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_33",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_34",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_35",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_36",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_37",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_38",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_39",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_40",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_41",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_42",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_43",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_44",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_45",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_46",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_47",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_48",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_49",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_50",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_51",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_52",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_53",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_54",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_55",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_56",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_57",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_58",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_59",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_60",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_61",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_62",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_63",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_64",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_65",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_66",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_67",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_68",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_69",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_70",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_71",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_72",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_73",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_74",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_75",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_76",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_77",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_78",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_79",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_80",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_81",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_82",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_83",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_84",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_85",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_86",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_87",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_88",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_89",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_90",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_91",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_92",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_93",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_94",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_95",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_96",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_97",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_98",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_99",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_100",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_101",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_102",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_103",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_104",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_105",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_106",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_107",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_108",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_109",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_110",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_111",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_112",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_113",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_114",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_115",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_116",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_117",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_118",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_119",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_120",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_121",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_122",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_123",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_124",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_125",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_126",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_127",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_128",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_129",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_130",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_131",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_132",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_133",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_134",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_135",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_136",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_137",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_138",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_139",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_140",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_141",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_142",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_143",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_144",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_145",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_146",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_147",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_148",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_149",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_150",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_151",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_152",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_153",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_154",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_155",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_156",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_157",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_158",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_159",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_160",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_161",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_162",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_163",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_164",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_165",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_166",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_167",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_168",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_169",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_170",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_171",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_172",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_173",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_174",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_175",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_176",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_177",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_178",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_179",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_180",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_181",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_182",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_183",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_184",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_185",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_186",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_187",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_188",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_189",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_190",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_191",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_192",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_193",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_194",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_195",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_196",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_197",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_198",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_199",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_200",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_x_by_a"],
+          "as": ["median_median_x_by_a"]
+        }
+      ]
+    },
+    {
+      "name": "data_201",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["a", "b"],
+          "ops": ["median"],
+          "fields": ["median_y_by_b"],
+          "as": ["median_median_y_by_b"]
+        }
+      ]
+    },
+    {
+      "name": "data_202",
+      "source": "data_0",
+      "transform": [
+        {"type": "formula", "expr": "toNumber(datum[\"x\"])", "as": "x"},
+        {"type": "formula", "expr": "toNumber(datum[\"y\"])", "as": "y"}
       ]
     }
   ],
@@ -391,8 +2965,8 @@
       "type": "linear",
       "domain": {
         "fields": [
-          {"data": "data_2", "field": "x"},
-          {"data": "data_3", "field": "median_median_x_by_a"}
+          {"data": "data_202", "field": "x"},
+          {"data": "data_200", "field": "median_median_x_by_a"}
         ]
       },
       "range": [0, {"signal": "child_width"}],
@@ -404,8 +2978,8 @@
       "type": "linear",
       "domain": {
         "fields": [
-          {"data": "data_2", "field": "y"},
-          {"data": "data_4", "field": "median_median_y_by_b"}
+          {"data": "data_202", "field": "y"},
+          {"data": "data_201", "field": "median_median_y_by_b"}
         ]
       },
       "range": [{"signal": "child_height"}, 0],
